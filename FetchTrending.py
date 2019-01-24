@@ -33,9 +33,10 @@ qt=quoteContent['quotes']
 finalQuote=qt[0]
 print(finalQuote['quote'])
 print(finalQuote['author'])
-'''
+
 print(msg)
 msg+=(finalQuote['quote']+"-"+finalQuote['author'])
+'''
 
 import smtplib
 
