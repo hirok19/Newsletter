@@ -59,5 +59,8 @@ def send_email(subject, msg,senderemail):
 
 subject = "News letter of the day"
 
-for email in config.EMAILLIST:
-    send_email(subject, msg,email)
+with open('EmailList.csv') as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter='\n')
+    for row in csv_reader:
+        if(len(row)!=0):
+            send_email(subject, msg,row[0])
